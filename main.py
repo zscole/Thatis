@@ -1,9 +1,10 @@
 
+import os
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 import openai
 
-openai.api_key = "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"
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 app = FastAPI()
 
